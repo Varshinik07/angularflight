@@ -6,7 +6,7 @@
                 <thead>
                   <tr>
                     
-                    
+                    <th scope="col">Id</th>
                     <th scope="col">Origin</th>
                     <th scope="col">Description</th>
                     <th scope="col">Capacity</th>
@@ -15,10 +15,11 @@
                 <tbody>
                   <tr *ngFor="let i of viewflight">
                     
-                    
+                    <td>{{i.id}}</td>
                     <td>{{i.origin}}</td>
                     <td>{{i.destination}}</td>
                     <td>{{i.capacity}}</td>
+                    <td><button class="btn btn-danger"(click)="deleteflight(i.id)">Delete</button></td>
                   </tr>
                   
                 </tbody>
